@@ -1,0 +1,22 @@
+Question 02 : LeetCode 168 Excel Sheet Column Title
+Solution : 
+class Solution {
+    public String convertToTitle(int columnNumber) {
+        
+        
+          StringBuilder res=new StringBuilder();
+        //String res="";
+        while(columnNumber>0){
+            
+           char ch=(char)(65+(columnNumber-1)%26);
+            res=res.append(ch);
+           // res=ch+res;
+            columnNumber =(columnNumber-1)/26;
+            
+            
+            
+        }
+        return res.reverse().toString();//res;
+        
+    }
+}
