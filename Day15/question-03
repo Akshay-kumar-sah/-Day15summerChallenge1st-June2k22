@@ -1,0 +1,25 @@
+Question 03 : LeetCode 09 Palindrome Number
+Solution : 
+class Solution {
+    public boolean isPalindrome(int x) {
+
+        if(x==0) return true;
+        if(x<0||x%10==0) return false;
+        
+        int originalNumber=x;
+          int p=0;
+        int digit=0;
+        while(x>0){ 
+        
+        digit = x%10;
+        
+      
+        p=p*10+digit;
+            
+        x=x/10;
+        }
+        if(p==originalNumber) return true;
+        else return false;   
+        
+    }
+    }
